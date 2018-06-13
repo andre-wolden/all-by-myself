@@ -1,0 +1,11 @@
+{
+  "name": "all-by-myself",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test-myself"
+  },
+  "author": "",
+  "license": "ISC"
+}
