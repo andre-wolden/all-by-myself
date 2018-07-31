@@ -5,7 +5,7 @@ const url = require("url");
 console.warn("all-by-myself...");
 
 const hostname = "127.0.0.1";
-const port = 3000;
+const port = 1337;
 
 const html = fs.readFileSync('./static/index.html');
 const indexjs = fs.readFileSync('./static/index.js');
