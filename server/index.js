@@ -9,12 +9,18 @@ const port = 1337;
 
 const html = fs.readFileSync('./static/index.html');
 const indexjs = fs.readFileSync('./static/index.js');
+const favicon = fs.readFileSync('./static/favicon.ico');
 
 const funFile = fs.createWriteStream("./funFile.txt");
 funFile.write("My life, for Aiur...");
 
 
 const server = http.createServer((req, res) => {
+
+    // console.warn("----");
+    // console.warn("*");
+    // console.warn(req.headers);
+    // console.warn("----");
 
     res.writeHead(200, "Its all good...", {
         'Content-Type': 'text/html'
@@ -27,12 +33,13 @@ const server = http.createServer((req, res) => {
     if ( uri === "/index.js" ){
         console.warn("serving js file...");
         res.end(indexjs);
+    } else if ( uri === "/favicon.ico"){
+        console.warn("serving favicon...");
+        res.end(favicon);
     } else {
         console.warn("serving something else...");
         res.end(html);
     }
-
-
 });
 
 server.listen(port, hostname, () => {
