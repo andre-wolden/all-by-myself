@@ -1,3 +1,3 @@
 <p>clone</p>
-npm install
-npm start
+<p>npm install</p>
+<p>npm start</p>
