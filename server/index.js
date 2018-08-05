@@ -6,11 +6,15 @@ const port = process.env.PORT ? process.env.PORT : 1337;
 
 app = express();
 
-app.use(express.static(__dirname));
+console.warn(path.join(__dirname, '..', 'dist'));
+
+app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.use(express.static(path.join(__dirname, '..', 'static')));
+
 // app.use(express.static('dist'));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, '..', 'static/index.html'));
 });
 
 app.listen(port, () =>{
