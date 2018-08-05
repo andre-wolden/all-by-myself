@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "node server",
-    "production": "node server"
+    "production": "node server",
+    "heroku-postbuild": "webpack --config webpack.config.js"
   },
   "author": "Wolden!",
   "license": "ISC",
