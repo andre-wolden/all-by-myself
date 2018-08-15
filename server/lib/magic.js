@@ -1,18 +1,21 @@
 "use strict";
 
-exports.pi = 3.14;
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+        this.size = width * height;
+    }
 
-
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function blablabla");
+    printSize(){
+        console.warn("Size = " + this.size);
     }
 }
 
-exports.Rectangle = function Rectangle(height, width) {
-    _classCallCheck(this, Rectangle);
+const r = new Rectangle(2, 3);
 
-    this.height = height;
-    this.width = width;
-};
+console.log("---------------------------")
+console.log("From transpiled magic file:");
 
+r.printSize();
+console.log("---------------------------")

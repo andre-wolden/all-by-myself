@@ -21,10 +21,6 @@ app.listen(port, () =>{
     console.log(`all-by-myself listening on port ${port}`)
 });
 
-const m = require('./lib/magic.js');
+const m = require('.././build/lib/magic.js');
 
-console.warn('PI = ' + m.pi);
 
-var r = new m.Rectangle(13, 14);
-
-console.warn(r.height);
