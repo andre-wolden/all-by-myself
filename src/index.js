@@ -14,4 +14,4 @@ console.warn(value);
 
 var s = document.getElementById("denHer");
 
-s.innerText = "Hei Lena";
+s.innerText = "Hei Lena Kang Wolden";
