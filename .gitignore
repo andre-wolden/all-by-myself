@@ -1,0 +1,6 @@
+.idea/modules.xml
+.idea/workspace.xml
+all-by-myself.iml
+build/
+node_modules/
+.idea

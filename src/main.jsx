@@ -1,32 +1,23 @@
 import React from "react";
 
+import { TransformingButton } from './components/TransformingButton.jsx';
 
-class LikeButton extends React.Component {
+class App extends React.Component {
+
     constructor(props) {
         super(props);
-        this.state = {
-            liked: false
-        };
     }
 
     render(){
-
-        if (this.state.liked) {
-            return 'You liked this.';
-        }
-
         return(
-            <button onClick={ () => this.setState({liked: true})}>
-                Like
-            </button>
+            <div>
+                <h3>All-by-myself React App</h3>
+                <TransformingButton />
+            </div>
         )
 
-        // return e(
-        //     'button',
-        //     { onClick: () => this.setState({liked: true})},
-        //     'Like'
-        // );
     }
 }
 
-export default LikeButton;
+
+export default App;
