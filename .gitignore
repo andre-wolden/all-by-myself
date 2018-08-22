@@ -4,3 +4,4 @@ all-by-myself.iml
 build/
 node_modules/
 .idea
+dist/
