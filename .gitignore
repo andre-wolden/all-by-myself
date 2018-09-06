@@ -5,3 +5,5 @@ build/
 node_modules/
 .idea
 dist/
+reports/
+selenium-debug.log

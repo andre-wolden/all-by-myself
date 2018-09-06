@@ -22,7 +22,6 @@ export default class Animation extends React.Component {
 		};
 
 		return <div>
-			asdf
 			<Lottie
 				options={defaultOptions}
 				height={400}
