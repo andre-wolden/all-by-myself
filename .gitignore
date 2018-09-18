@@ -7,3 +7,4 @@ node_modules/
 dist/
 reports/
 selenium-debug.log
+strategy.txt

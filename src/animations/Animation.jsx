@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Lottie from 'react-lottie';
-import blunkedamejson from './blunkedame.json';
 import sentsuccess from './sentsuccess.json';
 
 export default class Animation extends React.Component {
