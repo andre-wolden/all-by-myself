@@ -1,16 +1,46 @@
-const chromedriver = {
-	'win32': './selenium/chromedriver-win32.exe',
-	'win64': './selenium/chromedriver-win32.exe',
-	'linux' : './node_modules/chromedriver/chromedriver/chromedriver',
-	'mac' : './node_modules/chromedriver/lib/chromedriver/chromedriver'
+// nightwatch.conf.js
+
+const chromedriver = require('chromedriver');
+const geckodriver = require('geckodriver');
+
+module.exports = {
+    test_settings: {
+        default: {
+            webdriver: {
+                start_process: true,
+                server_path: chromedriver.path,
+                cli_args: ['--port=4444']
+            },
+            desiredCapabilities: {
+                browserName: 'chrome',
+                javascriptEnabled: true,
+                acceptSslCerts: true,
+                chromeOptions: {
+                    args: ['headless', 'disable-gpu']
+                }
+            }
+        },
+        chrome: {
+            webdriver: {
+                server_path: chromedriver.path
+            },
+            desiredCapabilities: {
+                browserName: 'chrome',
+                javascriptEnabled: true,
+                acceptSslCerts: true,
+                chromeOptions: {
+                    args: ['disable-gpu']
+                }
+            }
+        },
+        firefox: {
+            webdriver: {
+                server_path: geckodriver.path
+            },
+            desiredCapabilities: {
+                browserName: 'firefox',
+                marionette: true
+            }
+        }
+    }
 };
-
-module.exports = ((settings) =>  {
-	const testData = settings.test_settings.default;
-	console.warn("JEJEEEEEEE....");
-	console.warn(process.platform);
-	settings.selenium.cli_args['webdriver.chrome.driver'] = chromedriver[process.platform];
-
-	return settings;
-
-})(require('./nightwatch.json'));

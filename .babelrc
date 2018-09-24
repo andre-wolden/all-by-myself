@@ -1,3 +1,24 @@
+//{
+//  "presets": [
+//    "env",
+//    "react",
+//    [
+//      "env",
+//      {
+//        "targets": {
+//          "node": "current"
+//        }
+//      }
+//    ]
+//  ]
+//}
+
 {
-  "presets": ["env", "react"]
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ]
 }
